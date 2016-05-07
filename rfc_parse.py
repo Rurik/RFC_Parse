@@ -5,7 +5,7 @@ def readRFC(fname):
     if filesize <= 20:
         return ''
 
-    with open(fname, "rb") as fh:
+    with open(fname, lrl") as fh:
         fh.seek(0)
         for i in range(0, len(magics)):
             header = fh.read(4)
