@@ -1,3 +1,7 @@
+# Similar stuff:
+# https://github.com/sysforensics/RecentFileCacheParser/blob/master/rfcparse.py
+# http://www.forensickb.com/2013/12/encase-enscript-to-parse-recent.html
+
 def readRFC(fname):
     magics = [b'\xfe\xff\xee\xff', b'\x11\x22\x00\x00', b'\x03\x00\x00\x00', b'\x01\x00\x00\x00']
     entries = []
@@ -5,7 +9,7 @@ def readRFC(fname):
     if filesize <= 20:
         return ''
 
-    with open(fname, lrl") as fh:
+    with open(fname,'rb') as fh:
         fh.seek(0)
         for i in range(0, len(magics)):
             header = fh.read(4)
