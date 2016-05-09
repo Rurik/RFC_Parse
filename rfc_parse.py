@@ -25,3 +25,13 @@ def readRFC(fname):
             fh.read(2) # Disregard last two unicode null terminators as they break in decode
     fh.close()
     return entries
+    
+def main():
+    ...
+    ...
+    data = readRFC(fname)
+    for entry in data:
+        print(data.code('utf-16'))
+    ...
+    ...
+    
