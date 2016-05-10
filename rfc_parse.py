@@ -10,7 +10,6 @@ def readRFC(fname):
         return ''
 
     with open(fname,'rb') as fh:
-        fh.seek(0)
         for i in range(0, len(magics)):
             header = fh.read(4)
             if not header == magics[i]:
