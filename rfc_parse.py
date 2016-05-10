@@ -14,6 +14,7 @@ def readRFC(fname):
         for i in range(0, len(magics)):
             header = fh.read(4)
             if not header == magics[i]:
+                fh.close()
                 return ''
         volumeID = fh.read(4) # Disregard this value
         
