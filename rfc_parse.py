@@ -1,3 +1,7 @@
+import os
+import struct
+import sys
+# RecentFileCacheParser - @bbaskin
 # Similar stuff:
 # https://github.com/sysforensics/RecentFileCacheParser/blob/master/rfcparse.py
 # http://www.forensickb.com/2013/12/encase-enscript-to-parse-recent.html
@@ -27,11 +31,11 @@ def readRFC(fname):
     return entries
     
 def main():
-    ...
-    ...
-    data = readRFC(fname)
+    print(sys.argv[1])
+    data = readRFC(sys.argv[1])
+    print(len(data))
     for entry in data:
-        print(data.decode('utf-16'))
-    ...
-    ...
-    
+        print(entry.decode('utf-16'))
+
+if __name__ == '__main__':
+    main()
